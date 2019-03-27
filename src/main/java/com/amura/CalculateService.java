@@ -7,7 +7,7 @@ import java.util.Stack;
 @Component
 public class CalculateService {
 
-    private int getMaxArea(int row, int column, int[] histogram)
+    private int getMaxArea(int[] histogram)
     {
         Stack<Integer> stackForIndices = new Stack<>();
 
@@ -48,7 +48,7 @@ public class CalculateService {
 
     public CalculationResponse getMaxSubMatrix(int rows, int columns, int[][] inputMatrix) {
         CalculationResponse response = new CalculationResponse();
-        int result = getMaxArea(rows, columns, inputMatrix[0]);
+        int result = getMaxArea(inputMatrix[0]);
 
         for (int i = 1; i < rows; i++)
         {
@@ -58,7 +58,7 @@ public class CalculateService {
                 if (inputMatrix[i][j] == 1) inputMatrix[i][j] += inputMatrix[i - 1][j];
 
 
-            result = Math.max(result, getMaxArea(rows,columns,inputMatrix[i]));
+            result = Math.max(result, getMaxArea(inputMatrix[i]));
         }
 
         response.setLongestSubMatrixArea(result);
