@@ -6,6 +6,9 @@ Pre-requisites
 1. Java
 2. Groovy (for tests)
 
+Running Application
+---------------------
+
 * Install dependencies and run application: 
 ``./gradlew build && java -jar build/libs/amura-assignment-1.0.jar``
 
