@@ -7,7 +7,7 @@ import java.util.Stack;
 @Component
 public class CalculateService {
 
-    private int getMaxArea(int row, int column, int[] hist)
+    private int getMaxArea(int row, int column, int[] histogram)
     {
         Stack<Integer> stackForIndices = new Stack<>();
 
@@ -16,16 +16,16 @@ public class CalculateService {
         int area_with_top;
 
         int i = 0;
-        while (i < hist.length)
+        while (i < histogram.length)
         {
-            if (stackForIndices.empty() || hist[stackForIndices.peek()] <= hist[i])
+            if (stackForIndices.empty() || histogram[stackForIndices.peek()] <= histogram[i])
                 stackForIndices.push(i++);
 
             else
             {
                 stack_top = stackForIndices.peek();
                 stackForIndices.pop();
-                area_with_top = hist[stack_top] * (stackForIndices.empty() ? i : i - stackForIndices.peek() - 1);
+                area_with_top = histogram[stack_top] * (stackForIndices.empty() ? i : i - stackForIndices.peek() - 1);
 
                 if (max_area < area_with_top)
                     max_area = area_with_top;
@@ -36,7 +36,7 @@ public class CalculateService {
         {
             stack_top = stackForIndices.peek();
             stackForIndices.pop();
-            area_with_top = hist[stack_top] * (stackForIndices.empty() ? i : i - stackForIndices.peek() - 1);
+            area_with_top = histogram[stack_top] * (stackForIndices.empty() ? i : i - stackForIndices.peek() - 1);
 
             if (max_area < area_with_top)
                 max_area = area_with_top;
