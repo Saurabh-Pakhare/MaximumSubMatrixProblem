@@ -1,5 +1,6 @@
-package com.amura;
+package com.amura.service;
 
+import com.amura.models.CalculationResponse;
 import org.springframework.stereotype.Component;
 
 import java.util.Stack;

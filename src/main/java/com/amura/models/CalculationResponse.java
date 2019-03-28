@@ -1,4 +1,4 @@
-package com.amura;
+package com.amura.models;
 
 public class CalculationResponse {
     private Integer longestSubMatrixArea;
@@ -7,7 +7,7 @@ public class CalculationResponse {
         return longestSubMatrixArea;
     }
 
-    void setLongestSubMatrixArea(Integer longestSubMatrixArea) {
+    public void setLongestSubMatrixArea(Integer longestSubMatrixArea) {
         this.longestSubMatrixArea = longestSubMatrixArea;
     }
 

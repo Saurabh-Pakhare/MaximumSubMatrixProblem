@@ -1,5 +1,8 @@
-package com.amura;
+package com.amura.controllers;
 
+import com.amura.models.InputMatrix;
+import com.amura.service.CalculateService;
+import com.amura.models.CalculationResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

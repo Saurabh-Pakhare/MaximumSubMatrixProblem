@@ -1,4 +1,4 @@
-import com.amura.CalculateService
+import com.amura.service.CalculateService
 import spock.lang.Specification
 
 class CalculateServiceTest extends Specification {

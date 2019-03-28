@@ -1,6 +1,6 @@
-package com.amura;
+package com.amura.models;
 
-class InputMatrix {
+public class InputMatrix {
 
     private int rows;
     private int columns;
